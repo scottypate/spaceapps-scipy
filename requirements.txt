@@ -1,0 +1,16 @@
+numpy
+scipy
+pandas
+matplotlib
+ipython
+jupyter
+jupyterlab
+seaborn
+scikit-image
+scikit-learn
+statsmodels
+geopandas
+shapely
+Rtree
+missingno
+descartes

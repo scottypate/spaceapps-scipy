@@ -1,0 +1,18 @@
+version: "3"
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/home/jovyan/notebooks
+      - ./data:/home/jovyan/data
+    environment:
+      - USER=root
+      - GRANT_SUDO=yes
+      - GEN_CERT=yes
+      - GH_USER=$USER
+      - GH_TOKEN=$GITHUB_PAT
+      - JUPYTER_ENABLE_LAB=True
