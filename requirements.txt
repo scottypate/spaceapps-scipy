@@ -14,3 +14,4 @@ shapely
 Rtree
 missingno
 descartes
+geohash
