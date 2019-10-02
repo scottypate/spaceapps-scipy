@@ -9,6 +9,7 @@ services:
     volumes:
       - ./notebooks:/home/jovyan/notebooks
       - ./data:/home/jovyan/data
+      - ./lib:/home/jovyan/lib
     environment:
       - USER=root
       - GRANT_SUDO=yes

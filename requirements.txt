@@ -14,4 +14,6 @@ shapely
 Rtree
 missingno
 descartes
-geohash
+geohash2
+keras
+tensorflow
