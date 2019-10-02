@@ -19,10 +19,11 @@ This discussion is going to highlight some of the packages and tools used in a t
 <summary>Anaconda/Miniconda Details</summary>
 
 1. Install [Anaconda](https://docs.anaconda.com/anaconda/install/), or install [Miniconda](https://docs.conda.io/en/latest/miniconda.html)
-2. Clone the repo, `git clone http://github.com/scottypate/spaceapps-scipy`
-3. Create a new conda environment and install dependencies, `conda create -n spaceapps python=3 --file requirements.txt`
-4. Activate the new conda env, `conda activate spaceapps`
-5. Start jupyter lab, `jupyter lab`
+2. Install spatial index, `brew spatialindex`.
+3. Clone the repo, `git clone http://github.com/scottypate/spaceapps-scipy`
+4. Create a new conda environment and install dependencies, `conda create -n spaceapps python=3 --file requirements.txt`
+5. Activate the new conda env, `conda activate spaceapps`
+6. Start jupyter lab, `jupyter lab`
 </details>
 
 ### Typical Scientific Python Data Packages
@@ -36,6 +37,7 @@ This discussion is going to highlight some of the packages and tools used in a t
 
 1. Geopandas - Extends pandas data manipulation to geographic data
 2. Shapely - Python utility to manipulate geometric data.
+3. Rtree - spatial indexing for python
 
 ### Hurricane Katrina Example - [Source](https://www.datacamp.com/community/tutorials/geospatial-data-python)
 
@@ -44,3 +46,7 @@ Use various libraries shown here to examine data from Hurricane Katrina.
 ### Predicting Hurricane Path. 
 
 Can we use past hurricane data to determine the path of a new hurricane?
+
+*[Source](https://arxiv.org/abs/1802.02548)
+*[Source](https://medium.com/@kap923/hurricane-path-prediction-using-deep-learning-2f9fbb390f18)
+*[Source](https://pdfs.semanticscholar.org/cb33/81448d1e79ab28796d74218a988f203b12ee.pdf)
