@@ -20,6 +20,10 @@ from keras.utils import to_categorical
 from keras.layers.core import Dense, Dropout, Activation, Masking
 from keras.layers.recurrent import LSTM
 from keras.layers import Flatten, Embedding
+from tensorflow.python.client import device_lib
+
+# Verify GPU device is recognized
+print(device_lib.list_local_devices())
 
 app_dir = os.path.dirname(os.path.dirname(__file__))
 # Read in all Atlantic hurricane data

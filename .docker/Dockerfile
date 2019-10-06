@@ -16,11 +16,18 @@ WORKDIR $HOME
 RUN apt-get update
 RUN apt-get install -y libspatialindex-c4v5
 
+# Install CUDA dependencies
+RUN apt-get install -y curl
+RUN apt-get install -y wget
+apt-get - y install build-essential
+RUN apt-get install -y nvidia-docker2
+
 # Add local files as late as possible to avoid cache busting
 COPY .docker/ /usr/local/bin/
 COPY .config/ /usr/local/bin/
 RUN chmod +x /usr/local/bin/*
 RUN fix_permissions.sh
+RUN install_cuda.sh
 
 # Switch back to jovyan to avoid accidental container runs as root
 USER $NB_UID
@@ -28,5 +35,3 @@ USER $NB_UID
 COPY ./requirements.txt /home/$NB_USER
 
 RUN pip install -r requirements.txt
-
-CMD ["start_notebook.sh"]
